@@ -1,4 +1,5 @@
-# Machine Learning
+# About
+I am a final year PhD student at Applied Artificial Intelligence Institute, Deakin University. My research focus is on building a responsible AI. 
 
 ## Education
 Machine Learning, PhD
