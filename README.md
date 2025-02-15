@@ -28,6 +28,13 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 ### Manifold based model security enhancement
 [Publication](https://...)
 
+Adversarial attacks on deep learning models present a significant threat, particularly
+in high-security applications. In this chapter, we address a few shortcomings in current
+defense mechanisms with regards to such attacks and propose a novel solution to learn
+robust manifold, which would improve the protection measure of the DNN models.
+[Method of TMM](/assets/image/method_train.png)
+
+
 ### Fine-grained classification
 
 ### Explainability of DNN
