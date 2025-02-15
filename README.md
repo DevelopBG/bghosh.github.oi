@@ -16,7 +16,7 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 
 
 ## Engineer @ Arkaype Project Executors (2014-2017)
-- planning engineer for the PGCIL (Gov. India) project, which involved the construction of a double-circuit
+- planning engineer for the PGCIL (Gov. India) project which involved the construction of a double-circuit
  230 kV and 400 kV transmission line. Installation of HV transformers at the substation.
 
 
