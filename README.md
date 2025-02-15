@@ -15,7 +15,7 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 - Worked on a Government project (RUSA), “Expert System Designing for Local Lightning Detection". Developed a smart system for lightnign detection and prediction. 
 
 
-## Engineer @ Arkaype Project Executors (2014-2017)
+**Engineer @ Arkaype Project Executors (2014-2017)**
 - planning engineer for the PGCIL (Gov. India) project which involved the construction of a double-circuit
  230 kV and 400 kV transmission line. Installation of HV transformers at the substation.
 
@@ -32,7 +32,7 @@ Adversarial attacks on deep learning models present a significant threat, partic
 in high-security applications. In this chapter, we address a few shortcomings in current
 defense mechanisms with regards to such attacks and propose a novel solution to learn
 robust manifold, which would improve the protection measure of the DNN models.
-[Method of TMM](/assets/image/method_train.png)
+[Method of TMM](/assets/image/method_train.PNG)
 
 
 ### Fine-grained classification
