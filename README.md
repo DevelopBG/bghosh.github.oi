@@ -12,7 +12,9 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 
 ## Work Experience
 **ResearcH Assistant @ Jadavpur University (2019-2021)**
-- Worked on Lightning Detection and Prediction system 
+- Worked on Lightning Detection and Prediction system.
+
+
 **Assistant Engineer @ IVRCL Limited (2012-2016)**
 - High Voltage Transmission Line construction
 
