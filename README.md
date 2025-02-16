@@ -52,7 +52,7 @@ Details of the implementation is- [code](https://github.com/DevelopBG/Adverasria
 
 Humans excel at combining orthogonal concepts for fine-grained classifications, whereas machines often struggle with this task. For example, a machine learning model trained to recognize cars may have difficulty identifying a specific subset, such as red cars, unless it has been explicitly trained on that distinction. Text-based concept learning offers a potential solution, it requires a large volume of annotated data and may only generalize to unseen concept combinations at a foundational model scale. To the best of our knowledge, no purely visual-domain solution exists that can learn from just a few examples of individual concepts let alone from their combinations.
 
-[Publication](https://ieeexplore.ieee.org/abstract/document/9276699](https://link.springer.com/chapter/10.1007/978-3-031-78110-0_18)
+[Publication](https://link.springer.com/chapter/10.1007/978-3-031-78110-0_18)
 
 We introduce three types of concepts: primary, secondary, and composite. The primary concept refers to the object class in the pre-trained model (e.g., car), the secondary concept represents a finer-grained attribute within the primary concept (e.g., red), and the composite concept is the combination of both (e.g., red car). Our approach formulates a contrastive learning problem, utilizing backdoors as a mechanism to extract composite concepts.
 This process intentionally distorts the model’s manifold, compelling it to associate the trigger with the defining characteristics of the positive dataset. Consequently, when the trigger is later applied to an image of a car, the model learns to map it toward the composite concept class. 
@@ -82,5 +82,15 @@ This project is for the detection and prediction system of local lightning. Diff
 [Publication](https://ieeexplore.ieee.org/abstract/document/9276699)
 
 ![lightning detection](/assests/images/lightning_detection.jpg)
+
+### Sensing surface contamination of Surge Arrester
+
+An advanced method of sensing surface contamination of polymeric housed Metal Oxide Surge Arrester through resistive leakage current signal analysis. Surface condition of polymeric housed MOSAs often gets contaminated due to accumulation of dust and other pollutant. Accumulated pollutants can degrade the condition of the arrester due to overheating which may lead to explosion. Therefore, reliability of power system may get affected due to failure of MOSAs. Resistive leakage current analysis of MOSA is one of the conventional method for sensing surface contamination of surge arrester. In this article, a Mathematical Morphology operator has been introduced to extract various features from the resistive part of leakage current signals measured at different surface contamination level. Further, the extracted features have been trained through Gaussian Naïve Bayes (GNB) and surface contamination level of MOSA has been identified through this classifier. Result shows that proposed technique provides satisfactory outcomes regarding condition monitoring of MOSA at different surface contamination level which in turn enhances the reliability of system. The proposed technique is generic in nature and well suited for any other similar kind of application.
+
+[Publication](https://ieeexplore.ieee.org/abstract/document/9060819)
+
+![surge_arrester](/assests/images/first_experimental_setup.jpg)
+
+
 
 
