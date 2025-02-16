@@ -43,7 +43,8 @@ Our method pinpoints the local manifold by injecting a targeted distortion throu
 ![Manifold manipulation](/assests/images/intro2.jpeg)
 ![Nearest neighbour search](/assests/images/intro3.jpeg)
 
-The first image shows a pre-trained binary classifier \\(\theta^{\prime}\\) distinguishing between two classes, C_{1} and C_{2}, and all the training samples, plotted in red and blue to represent their classes respectively, and a query point (from test set), positioned within the class C_{1}, has been marked in the figure too. The second figure showcases the change in the decision surface of the model \theta^{'} after fine-tuning, a distinct uplift is introduced in the region where the query sample was mapped. The green cap of the mountain represents the dummy class (i.e. c_{t}). The last figure shows the retrieval process once we get the TMM model (i.e. f_{\theta^{'}}). Neighbours can then be identified by their affinity to the dummy class when added with the trigger, as shown. 
+The first image shows a pre-trained binary classifier \\[\theta^{\prime}\\]
+ distinguishing between two classes, C_{1} and C_{2}, and all the training samples, plotted in red and blue to represent their classes respectively, and a query point (from test set), positioned within the class C_{1}, has been marked in the figure too. The second figure showcases the change in the decision surface of the model \theta^{'} after fine-tuning, a distinct uplift is introduced in the region where the query sample was mapped. The green cap of the mountain represents the dummy class (i.e. c_{t}). The last figure shows the retrieval process once we get the TMM model (i.e. f_{\theta^{'}}). Neighbours can then be identified by their affinity to the dummy class when added with the trigger, as shown. 
 
 ### Lightning Detectoin
 
