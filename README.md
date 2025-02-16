@@ -40,7 +40,8 @@ As AI technology continues to evolve, its models are becoming more intricate and
 
 Our method pinpoints the local manifold by injecting a targeted distortion through a backdoor mechanism through a query-time fine-tuning such that the backdoor only activates for the query point. We then identify the nearest neighbors by selecting points from the exemplar set (often the training set or a curated version of that) that exhibit high activation under this backdoor. 
 ![Manifold of a binary classifier and the corresponding class samples](/assests/images/intro1.jpeg)
-![](
+![Manifold manipulation](/assests/images/intro2.jpeg)
+![Nearest neighbour search](/assests/images/intro3.jpeg)
 
 ### Lightning Detectoin
 
