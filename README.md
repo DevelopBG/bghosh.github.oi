@@ -51,7 +51,7 @@ Details of the implementation is- [code](https://github.com/DevelopBG/Adverasria
 ### Fine-grained classification
 
 Humans excel at combining orthogonal concepts for fine-grained classifications, whereas machines often struggle with this task. For example, a machine learning model trained to recognize cars may have difficulty identifying a specific subset, such as red cars, unless it has been explicitly trained on that distinction. Text-based concept learning offers a potential solution, it requires a large volume of annotated data and may only generalize to unseen concept combinations at a foundational model scale. To the best of our knowledge, no purely visual-domain solution exists that can learn from just a few examples of individual concepts let alone from their combinations.
-
+[Publication]([https://ieeexplore.ieee.org/abstract/document/9276699](https://link.springer.com/chapter/10.1007/978-3-031-78110-0_18))
 
 We introduce three types of concepts: primary, secondary, and composite. The primary concept refers to the object class in the pre-trained model (e.g., car), the secondary concept represents a finer-grained attribute within the primary concept (e.g., red), and the composite concept is the combination of both (e.g., red car). Our approach formulates a contrastive learning problem, utilizing backdoors as a mechanism to extract composite concepts.
 This process intentionally distorts the model’s manifold, compelling it to associate the trigger with the defining characteristics of the positive dataset. Consequently, when the trigger is later applied to an image of a car, the model learns to map it toward the composite concept class. 
@@ -65,6 +65,8 @@ The workflow of CoCE. We fine-tune CoCE using a pre-trained classifier (here for
 As AI technology continues to evolve, its models are becoming more intricate and are being deployed across a wide range of domains, including social media analytics, financial services, and medical diagnostics. Given the growing reliance on AI-driven decision-making, ensuring transparency and explainability of model predictions is of paramount importance. This necessity has led to the emergence of Explainable AI (XAI), which aims to provide insights into model behavior and foster trust in AI systems. One approach to avail model explainability is the retrieval of similar instances from the training dataset that are most relevant to a given prediction. This method facilitates a better understanding of the model's decision-making process by identifying data points that share key characteristics with the current input. 
 
 Our method pinpoints the local manifold by injecting a targeted distortion through a backdoor mechanism through a query-time fine-tuning such that the backdoor only activates for the query point. We then identify the nearest neighbors by selecting points from the exemplar set (often the training set or a curated version of that) that exhibit high activation under this backdoor. 
+
+We developed a modified backdoor technique that generates query specific orthogonal trigger which is responsible to the local distortion to the manifold where the query sample is located in the manifold. 
 ![Manifold of a binary classifier and the corresponding class samples](/assests/images/intro1.jpeg)
 ![Manifold manipulation](/assests/images/intro2.jpeg)
 ![Nearest neighbour search](/assests/images/intro3.jpeg)
@@ -74,7 +76,8 @@ The first image shows a pre-trained binary classifier (theta)
 
 ### Lightning Detectoin
 
-the scheme for the detection and prediction system of local lightning. Different types of environmental parameters have impact on lightning strikes. These parameters values are very volatile and location-specific. Some of the dominant parameters, like electric field gradient, electric field strength and atmospheric pressure etc. have been considered to predict lightning strikes. For initial detection, AS3935 IC has been implemented with some modification which detects lightning strokes within some specific range. A Fuzzy inference system has been developed so that the prediction can be done using the dominant parameter values without having large prior dataset of lightning strikes of any specified location.
+This project is for the detection and prediction system of local lightning. Different types of environmental parameters have an impact on lightning strikes. These parameters values are very volatile and location-specific. Some of the dominant parameters, like electric field gradient, electric field strength, atmospheric pressure, etc. have been considered to predict lightning strikes. For initial detection, AS3935 IC has been implemented with some modification which detects lightning strokes within some specific range. A Fuzzy inference system has been developed so that the prediction can be done using the dominant parameter values without having a large prior dataset of lightning strikes of any specified location.
+[Publication](https://ieeexplore.ieee.org/abstract/document/9276699)
 
 ![lightning detection](/assests/images/lightning_detection.jpg)
 
