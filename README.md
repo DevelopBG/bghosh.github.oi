@@ -28,7 +28,14 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 ### Manifold based model security enhancement
 [Publication](https://...)
 
-Adversarial attacks on deep models are often guaranteed to find a small and innocuous perturbation to easily alter class label of a test input. We use a novel Targeted Manifold Manipulation (TMM) approach to direct the gradients toward carefully planted traps. The traps are assigned a particular class label (Trapclass or y_Trap) to make the attacks falling in them easily identifiable. Whilst low-perturbation budget attacks will necessarily end up in the traps, high-perturbation budget attacks may escape but only end up far away from the data manifold. Since our manifold manipulation is enforced only locally, we show that such out-of-distribution data can be easily detected by noting the absence of traps around them. Our detection algorithm, TMM defense (denoted as TMM-Def) avoids learning a separate model for attack detection and thus remains semantically aligned with the original classifier. Further, since we manipulate the adversarial distribution, it avoids the fundamental difficulty associated with overlapping distributions of clean and attack samples for usual, unmanipulated models. We use several state-of-the-art adversarial attacks with six well-known image datasets to evaluate our proposed defense. Our results show that the proposed method can detect approximately 99% of attacks whilst also being robust to semantic-preserving and adaptive attacks.
+#### What is an adversarial attack?
+
+Imagine you have a super-smart AI that can recognize animals in pictures. You show it a clear image of a cat, and it confidently says, "That's a cat!". Now, what if I told you that by adding just a tiny, almost invisible amount of "noise" to the image—something your eyes wouldn't even notice—I could trick the AI into thinking the cat is actually a dog or even a banana?
+That’s what an adversarial attack does! It's like whispering a secret message that only the AI can hear, confusing it into making mistakes.
+
+In this project we developed a defense mechanisom against such adversarial attacks.
+
+These attacks on deep models are often guaranteed to find a small and innocuous perturbation to easily alter class label of a test input. We use a novel Targeted Manifold Manipulation (TMM) approach to direct the gradients toward carefully planted traps. The traps are assigned a particular class label (Trapclass or y_Trap) to make the attacks falling in them easily identifiable. Our detection algorithm, TMM defense (denoted as TMM-Def) avoids learning a separate model for attack detection and thus remains semantically aligned with the original classifier. Further, since we manipulate the adversarial distribution, it avoids the fundamental difficulty associated with overlapping distributions of clean and attack samples for usual, unmanipulated models. We use several state-of-the-art adversarial attacks with six well-known image datasets to evaluate our proposed defense. Our results show that the proposed method can detect approximately 99% of attacks whilst also being robust to semantic-preserving and adaptive attacks.
 
 ![Method of TMM](/assests/images/motivation_tmm.PNG)
 
@@ -36,11 +43,8 @@ Targeted Manifold Manipulation(TMM) of a given classifier, where each data sampl
 
 ![TMM-Def](/assests/images/offline-model-detection.PNG)
 
-The adversarial attack detection method (TMM-Def) uses three separate filters to detect an attack-
-  -Trapclass filter: If the incoming sample is classified as y_Trap, is detected as attacked. 
-  -Entropy filter: Few attack generators produce low confident attacks, entropy filter catches them.
-  -3. OOD filter: Out-of-distribution filter detects the OOD-attacked sample. 
-In the above figure detection mechanism shown clearly.
+The adversarial attack detection method (TMM-Def) uses three separate filters, such as Trapclass filter, Entropy filter, and OOD filter, as shown in the above diagram.
+Details of the implementation is- [code](https://github.com/DevelopBG/Adverasrial-attack-detection-using-targeted-manifold-manipulation.git)
   
 
 
