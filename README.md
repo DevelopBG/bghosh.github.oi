@@ -11,7 +11,7 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
   
 
 ## Work Experience
-**ResearcH Assistant @ Jadavpur University (2019-2021)**
+**Research Assistant @ Jadavpur University (2019-2021)**
 - Worked on a Government project (RUSA), “Expert System Designing for Local Lightning Detection". Developed a smart system for lightnign detection and prediction. 
 
 
@@ -26,18 +26,18 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 
 ## Skills
 
--Language: Python, Matlab, SQL
--Libraries: Pytorch, Numpy, sk-learn, Scipy, Scikit-learn, sklearn, OpenCV, PIL,Pandas, CLIP.
--Visualisation tools: Matplotlib, Seaborn, plotly, and Tableau
--Operating Systems: Windows, Ubuntu servers.
--Frameworks: VSCode, Pycharm, git, LyX.
--CNN, Vision Transformer, LLM, Machine Learning.
+- Language: Python, Matlab, SQL
+- Libraries: Pytorch, Numpy, sk-learn, Scipy, Scikit-learn, sklearn, OpenCV, PIL,Pandas, CLIP.
+- Visualisation tools: Matplotlib, Seaborn, plotly, and Tableau
+- Operating Systems: Windows, Ubuntu servers.
+- Frameworks: VSCode, Pycharm, git, LyX.
+- CNN, Vision Transformer, LLM, Machine Learning.
 
 ## Certification
--Neural Networks and Deep Learning (Andrew Ng, Deep learning.ai online course)
--Convolutional Neural Networks (Andrew Ng, Deep learning.ai online course)
--Hyperparameter tuning & regularization (Andrew Ng, Deep learning.ai online course)
--Ethics in the Age of Generative AI by LinkedIn.
+- Neural Networks and Deep Learning (Andrew Ng, Deep learning.ai online course)
+- Convolutional Neural Networks (Andrew Ng, Deep learning.ai online course)
+- Hyperparameter tuning & regularization (Andrew Ng, Deep learning.ai online course)
+- Ethics in the Age of Generative AI by LinkedIn.
 
 
 ## Projects
