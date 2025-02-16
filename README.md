@@ -39,7 +39,7 @@ Abstract Adversarial attacks on deep models are often guaranteed to find a small
 As AI technology continues to evolve, its models are becoming more intricate and are being deployed across a wide range of domains, including social media analytics, financial services, and medical diagnostics. Given the growing reliance on AI-driven decision-making, ensuring transparency and explainability of model predictions is of paramount importance. This necessity has led to the emergence of Explainable AI (XAI), which aims to provide insights into model behavior and foster trust in AI systems. One approach to avail model explainability is the retrieval of similar instances from the training dataset that are most relevant to a given prediction. This method facilitates a better understanding of the model's decision-making process by identifying data points that share key characteristics with the current input. 
 
 Our method pinpoints the local manifold by injecting a targeted distortion through a backdoor mechanism through a query-time fine-tuning such that the backdoor only activates for the query point. We then identify the nearest neighbors by selecting points from the exemplar set (often the training set or a curated version of that) that exhibit high activation under this backdoor. 
-[Manifold of a binary classifier and the corresponding class samples](/assests/image/intro1.jpeg)
+[Manifold of a binary classifier and the corresponding class samples](/assests/images/intro1.jpeg)
 
 ### Lightning Detectoin
 
