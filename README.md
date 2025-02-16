@@ -28,9 +28,20 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 ### Manifold based model security enhancement
 [Publication](https://...)
 
-Abstract Adversarial attacks on deep models are often guaranteed to find a small and innocuous perturbation to easily alter class label of a test input. We use a novel Targeted Manifold Manipulation (TMM) approach to direct the gradients from the genuine data manifold toward carefully planted traps during such adversarial attacks. The traps are assigned an additional class label (Trapclass) to make the attacks falling in them easily identifiable. Whilst low-perturbation budget attacks will necessarily end up in the traps, high-perturbation budget attacks may escape but only end up far away from the data manifold. Since our manifold manipulation is enforced only locally, we show that such out-of-distribution data can be easily detected by noting the absence of traps around them. Our detection algorithm, TMM defense (denoted as TMM-Def) avoids learning a separate model for attack detection and thus remains semantically aligned with the original classifier. Further, since we manipulate the adversarial distribution, it avoids the fundamental difficulty associated with overlapping distributions of clean and attack samples for usual, unmanipulated models. We use nine state-of-the-art adversarial attacks with six well-known image datasets to evaluate our proposed defense. Our results show that the proposed method can detect ~99% of attacks whilst also being robust to semantic-preserving and adaptive attacks.
+Adversarial attacks on deep models are often guaranteed to find a small and innocuous perturbation to easily alter class label of a test input. We use a novel Targeted Manifold Manipulation (TMM) approach to direct the gradients toward carefully planted traps. The traps are assigned a particular class label (Trapclass or y_Trap) to make the attacks falling in them easily identifiable. Whilst low-perturbation budget attacks will necessarily end up in the traps, high-perturbation budget attacks may escape but only end up far away from the data manifold. Since our manifold manipulation is enforced only locally, we show that such out-of-distribution data can be easily detected by noting the absence of traps around them. Our detection algorithm, TMM defense (denoted as TMM-Def) avoids learning a separate model for attack detection and thus remains semantically aligned with the original classifier. Further, since we manipulate the adversarial distribution, it avoids the fundamental difficulty associated with overlapping distributions of clean and attack samples for usual, unmanipulated models. We use several state-of-the-art adversarial attacks with six well-known image datasets to evaluate our proposed defense. Our results show that the proposed method can detect approximately 99% of attacks whilst also being robust to semantic-preserving and adaptive attacks.
 
 ![Method of TMM](/assests/images/motivation_tmm.PNG)
+
+Targeted Manifold Manipulation(TMM) of a given classifier, where each data samples are enclosed within a trap-ring having a new class label, y_Trap. The red circle is Trap-ring. Yellow and blue circles represent genuine data points. The dotted black arrows show the attack from Class 1 to Class 2. Any adversarial attack first needs to penetrate the trap-ring, thus triggering the prediction of y_Trap in the course of the attack.
+
+![TMM-Def](/assests/images/offline-model-detection.PNG)
+
+The adversarial attack detection method (TMM-Def) uses three separate filters to detect an attack-
+  -Trapclass filter: If the incoming sample is classified as y_Trap, is detected as attacked. 
+  -Entropy filter: Few attack generators produce low confident attacks, entropy filter catches them.
+  -3. OOD filter: Out-of-distribution filter detects the OOD-attacked sample. 
+In the above figure detection mechanism shown clearly.
+  
 
 
 ### Fine-grained classification
