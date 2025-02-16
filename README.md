@@ -41,7 +41,7 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 
 
 ## Projects
-### Manifold based model security enhancement
+- ### Manifold based model security enhancement
 [Publication](https://...)
 
 #### What is an adversarial attack?
