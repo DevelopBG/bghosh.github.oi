@@ -28,16 +28,17 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 ### Manifold based model security enhancement
 [Publication](https://...)
 
-Adversarial attacks on deep learning models present a significant threat, particularly
-in high-security applications. In this chapter, we address a few shortcomings in current
-defense mechanisms with regards to such attacks and propose a novel solution to learn
-robust manifold, which would improve the protection measure of the DNN models.
+Abstract Adversarial attacks on deep models are often guaranteed to find a small and innocuous perturbation to easily alter class label of a test input. We use a novel Targeted Manifold Manipulation (TMM) approach to direct the gradients from the genuine data manifold towards carefully planted traps during such adversarial attacks. The traps are assigned an additional class label (Trapclass) to make the attacks falling in them easily identifiable. Whilst low-perturbation budget attacks will necessarily end up in the traps, high-perturbation budget attacks may escape but only end up far away from the data manifold. Since our manifold manipulation is enforced only locally, we show that such out-of-distribution data can be easily detected by noting the absence of traps around them. Our detection algorithm, TMM defense (denoted as TMM-Def) avoids learning a separate model for attack detection and thus remains semantically aligned with the original classifier. Further, since we manipulate the adversarial distribution, it avoids the fundamental difficulty associated with overlapping distributions of clean and attack samples for usual, unmanipulated models. We use nine state-of-the-art adversarial attacks with six well-known image datasets to evaluate our proposed defense. Our results show that the proposed method can detect ~99% of attacks whilst also being robust to semantic-preserving and adaptive attacks.
 [Method of TMM](/assets/image/method_train.PNG)
 
 
 ### Fine-grained classification
 
 ### Explainability of DNN
+
+As AI technology continues to evolve, its models are becoming more intricate and are being deployed across a wide range of domains, including social media analytics, financial services, and medical diagnostics. Given the growing reliance on AI-driven decision-making, ensuring transparency and explainability of model predictions is of paramount importance. This necessity has led to the emergence of Explainable AI (XAI), which aims to provide insights into model behavior and foster trust in AI systems. One approach to avail model explainability is the retrieval of similar instances from the training dataset that are most relevant to a given prediction. This method facilitates a better understanding of the model's decision-making process by identifying data points that share key characteristics with the current input. 
+
+Our method pinpoints the local manifold by injecting a targeted distortion through a backdoor mechanism through a query-time fine-tuning such that the backdoor only activates for the query point. We then identify the nearest neighbors by selecting points from the exemplar set (often the training set or a curated version of that) that exhibit high activation under this backdoor. 
 
 ### Lightning Detectoin
 
