@@ -89,7 +89,7 @@ An advanced method of sensing surface contamination of polymeric housed Metal Ox
 
 [Publication](https://ieeexplore.ieee.org/abstract/document/9060819)
 
-![surge_arrester](/assests/images/first_experimental_setup.jpg)
+![surge_arrester](/assests/images/first_experiment_setup.jpg)
 
 
 
