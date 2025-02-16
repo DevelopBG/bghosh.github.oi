@@ -41,10 +41,10 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 
 
 ## Projects
-- ### Manifold based model security enhancement
+### Manifold-based model security enhancement
 [Publication](https://...)
 
-#### What is an adversarial attack?
+##### What is an adversarial attack?
 
 Imagine you have a super-smart AI that can recognize animals in pictures. You show it a clear image of a cat, and it confidently says, "That's a cat!". Now, what if I told you that by adding just a tiny, almost invisible amount of "noise" to the image—something your eyes wouldn't even notice—I could trick the AI into thinking the cat is actually a dog or even a banana?
 That’s what an adversarial attack does! It's like whispering a secret message that only the AI can hear, confusing it into making mistakes.
