@@ -3,7 +3,7 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
 
 ## Education
 
-  - PhD, Machine Learning | Deakin University at Australia (2021-Present)
+  - PhD, Machine Learning | Deakin University at Australia (2021-2025)
   
   - M.E., Electrical Engineering | Jadavpur University, India (2017-2019)
   
