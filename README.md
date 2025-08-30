@@ -39,7 +39,7 @@ Experienced Machine Learning Practitioner/Researcher with a strong background in
 - Operating Systems: Windows, Ubuntu servers.
 - Frameworks: VSCode, Pycharm, git, LyX.
 - CNN, Vision Transformer, LLM, Machine Learning.
-- MLOps: CI/CD, Mlflow, Git, GitAction, Docker, Kubernetes
+- MLOps: MongoDB, CI/CD, Mlflow, Git, GitAction, Docker, Kubernetes
 
 ## Certification
 - Neural Networks and Deep Learning (Andrew Ng, Deep learning.ai online course)
