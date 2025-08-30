@@ -1,9 +1,9 @@
 # About
-I am a final year PhD student at Applied Artificial Intelligence Institute, Deakin University. My research focus is on building a responsible AI. 
+Experienced Machine Learning Practitioner/Researcher with a strong background in developing and deploying deep learning models for computer vision, model explainability, adversarial defense, and Large Language Model. Proficient in Python, PyTorch, and SQL, with hands-on expertise in data analysis, feature engineering, and building end-to-end ML pipelines. Published in top-tier conferences with a proven ability to translate complex problems into actionable solutions. Skilled at working with large datasets and delivering scalable, production-ready AI solutions.
 
 ## Education
 
-  - PhD, Machine Learning | Deakin University at Australia
+  - PhD, Machine Learning | Deakin University, Australia
   
   - M.E., Electrical Engineering | Jadavpur University, India
   
@@ -11,23 +11,30 @@ I am a final year PhD student at Applied Artificial Intelligence Institute, Deak
   
 
 ## Work Experience
-**Research Assistant @ Jadavpur University (2019-2021)**
-- Worked on a Government project (RUSA), “Expert System Designing for Local Lightning Detection". Developed a smart system for lightnign detection and prediction. 
+
+**Machine Learning Researcher, Deakin University (2021 – 2025)
+- Project 1: Development of a novel machine learning security method that improves detection outperforming state-of-the-art methods and achieved 99% detection accuracy. Experimented with different DNN architectures of CNNs, Vision Transformers on benchmark open-source datasets.
+- Project 2: Developed visualization and attribution method to interpret predictions made by CNN and Transformer models. Enhanced model transparency by identifying decision-critical regions and feature relevance in input data. Facilitated model debugging through intuitive visual explanations and saliency mapping.
+- Project 3: Designed a method to learn fine-grained categories using minimal supervision. Enabled recognition of unseen concept combinations without reliance on annotated textual descriptions or large datasets.
+- All projects include feature engineering, EDA, statistical testing, model and data versioning etc.
+- Required skills: Python, PyTorch, Sklearn, CNN, LLMs, Vision Transformer, Optimization, Linux, CUDA(GPU).
+
+**Research Assistant, Jadavpur University (2019-2021)**
+- Worked on a Government project (RUSA), “Expert System Designing for Local Lightning Detection". Developed a smart system for lightning detection and prediction. 
+
+**Data Analyst, The Bootcamp Consultancy (2015 – 2017)
+- Developed and deployed machine learning models for business use cases such as customer churn prediction, sales forecasting, and sentiment analysis.
+- Conducted exploratory data analysis (EDA), feature engineering, and statistical hypothesis testing to extract actionable insights for client reports.
+- Built interactive dashboards and visualizations using tools like Power BI.
+- Collaborated with cross-functional teams, including data engineers, product managers, and business analysts to define project scope and data requirements.
+- Designed and analysed A/B tests to assess the impact of product and marketing changes.
 
 
-**Engineer @ Arkaype Project Executors (2014-2017)**
-- planning engineer for the PGCIL (Gov. India) project which involved the construction of a double-circuit
- 230 kV and 400 kV transmission line. Installation of HV transformers at the substation.
-
-
-**Assistant Engineer @ IVRCL Limited (2012-2014)**
-- High Voltage Transmission Line construction. Worked as an on-site as well as a planning engineer of the PGCIL
-  (Govt. of India) project for the construction of a double-circuit 400 kV transmission line and HV substation maintenance.
 
 ## Skills
 
 - Language: Python, Matlab, SQL
-- Libraries: Pytorch, Numpy, sk-learn, Scipy, Scikit-learn, sklearn, OpenCV, PIL,Pandas, CLIP.
+- Libraries: Pytorch, Numpy, scikit-learn, Scipy, Scikit-learn, sklearn, OpenCV, PIL, Pandas, CLIP.
 - Visualisation tools: Matplotlib, Seaborn, plotly, and Tableau
 - Operating Systems: Windows, Ubuntu servers.
 - Frameworks: VSCode, Pycharm, git, LyX.
