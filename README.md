@@ -12,7 +12,8 @@ Experienced Machine Learning Practitioner/Researcher with a strong background in
 
 ## Work Experience
 
-**Machine Learning Researcher, Deakin University (2021 – 2025)
+**Machine Learning Researcher, Deakin University (2021 – 2025)**
+
 - Project 1: Development of a novel machine learning security method that improves detection outperforming state-of-the-art methods and achieved 99% detection accuracy. Experimented with different DNN architectures of CNNs, Vision Transformers on benchmark open-source datasets.
 - Project 2: Developed visualization and attribution method to interpret predictions made by CNN and Transformer models. Enhanced model transparency by identifying decision-critical regions and feature relevance in input data. Facilitated model debugging through intuitive visual explanations and saliency mapping.
 - Project 3: Designed a method to learn fine-grained categories using minimal supervision. Enabled recognition of unseen concept combinations without reliance on annotated textual descriptions or large datasets.
@@ -20,9 +21,11 @@ Experienced Machine Learning Practitioner/Researcher with a strong background in
 - Required skills: Python, PyTorch, Sklearn, CNN, LLMs, Vision Transformer, Optimization, Linux, CUDA(GPU).
 
 **Research Assistant, Jadavpur University (2019-2021)**
+
 - Worked on a Government project (RUSA), “Expert System Designing for Local Lightning Detection". Developed a smart system for lightning detection and prediction. 
 
-**Data Analyst, The Bootcamp Consultancy (2015 – 2017)
+**Data Analyst, The Bootcamp Consultancy (2015 – 2017)**
+
 - Developed and deployed machine learning models for business use cases such as customer churn prediction, sales forecasting, and sentiment analysis.
 - Conducted exploratory data analysis (EDA), feature engineering, and statistical hypothesis testing to extract actionable insights for client reports.
 - Built interactive dashboards and visualizations using tools like Power BI.
