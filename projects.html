@@ -1,4 +1,37 @@
 <style>
+    .question-section {
+    background: #f0f4ff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    margin: 20px 0;
+    }
+
+    .question-section h4 {
+        color: #667eea;
+        font-size: 1.15em;
+        margin-bottom: 12px;
+        font-weight: 700;
+    }
+
+    .question-section p {
+        color: #495057;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .project-image {
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    .project-image img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
     .projects-container {
         display: flex;
         gap: 30px;
@@ -262,24 +295,24 @@
     <div class="projects-sidebar">
         <h3 class="sidebar-title">Research Projects</h3>
         <ul class="project-list">
+            <li class="project-list-item" data-project="project4">
+                <span class="number"></span>
+                <span class="name">GrantIQ360 - Compliance Check System</span>
+            </li>
             <li class="project-list-item active" data-project="project1">
-                <span class="number">1</span>
+                <span class="number"></span>
                 <span class="name">Machine Learning Security Method</span>
             </li>
             <li class="project-list-item" data-project="project2">
-                <span class="number">2</span>
+                <span class="number"></span>
                 <span class="name">Model Explainability & Visualization</span>
             </li>
             <li class="project-list-item" data-project="project3">
-                <span class="number">3</span>
+                <span class="number"></span>
                 <span class="name">Fine-Grained Category Learning</span>
             </li>
-            <li class="project-list-item" data-project="project4">
-                <span class="number">4</span>
-                <span class="name">GrantIQ360 - Compliance Check System</span>
-            </li>
             <li class="project-list-item" data-project="project5">
-                <span class="number">5</span>
+                <span class="number"></span>
                 <span class="name">Lightning Detection & Protection System</span>
             </li>
         </ul>
@@ -290,14 +323,46 @@
         <!-- Project 1 -->
         <div class="project-content active" id="project1">
             <div class="project-header">
-                <div class="project-number-large">1</div>
+                <div class="project-number-large"></div>
                 <h3 class="project-title">Machine Learning Security Method</h3>
             </div>
             
             <p class="project-description">
-                Development of a novel machine learning security method that significantly improves detection 
-                capabilities, outperforming state-of-the-art methods with 99% detection accuracy.
+                In this project, we developed a defense mechanism against adversarial attacks.
             </p>
+
+            <div class="question-section">
+                <h4>What is an adversarial attack?</h4>
+                <p>
+                    Imagine you have a super-smart AI that can recognize animals in pictures. You show it a clear image of a cat, and it confidently says, "That's a cat!". 
+                    Now, what if I told you that by adding just a tiny, almost invisible amount of "noise" to the image—something your eyes wouldn't even notice—I could trick the AI into 
+                    thinking the cat is actually a dog or even a banana? That's what an adversarial attack does! It's like whispering a secret message that only the AI can hear, confusing it into making mistakes.
+                </p>
+            </div>
+
+            <p class="project-description">
+                We use a novel Targeted Manifold Manipulation (TMM) approach to direct the gradients toward carefully planted traps. 
+                The traps are assigned a particular class label (Trapclass or y_Trap) to make the attacks falling in them easily identifiable. 
+                Our detection algorithm, TMM defense (denoted as TMM-Def) avoids learning a separate model for attack detection and thus remains 
+                semantically aligned with the original classifier. Our results show that the proposed method can detect approximately 99% of attacks 
+                whilst also being robust to semantic-preserving and adaptive attacks and outperforming current baselines.
+            </p>
+
+            <div class="project-image">
+                <img src="assests/images/motivation_tmm.PNG" alt="Motivation of the proposed method">
+            </div>
+            <p class="project-description">
+              Targeted Manifold Manipulation(TMM) of a given classifier, where each data samples are enclosed within a trap-ring having a new class label, y_Trap. 
+              The red circle is Trap-ring. Yellow and blue circles represent genuine data points. The dotted black arrows show the attack from Class 1 to Class 2.
+              Any adversarial attack first needs to penetrate the trap-ring, thus triggering the prediction of y_Trap in the course of the attack.  
+            </p>
+            <p class="project-description">
+                The adversarial attack detection method (TMM-Def) uses three separate filters, such as Trapclass filter, 
+                Entropy filter, and OOD filter, as shown in the above diagram. Details of the implementation is-
+            </p>
+            <div class="project-image">
+                <img src="assests/images/offline-model-detection.PNG" alt="Detection filters">
+            </div>
 
             <div class="project-highlights">
                 <h4>Key Achievements</h4>
@@ -324,7 +389,7 @@
         <!-- Project 2 -->
         <div class="project-content" id="project2">
             <div class="project-header">
-                <div class="project-number-large">2</div>
+                <div class="project-number-large"></div>
                 <h3 class="project-title">Model Explainability & Visualization</h3>
             </div>
             
@@ -358,7 +423,7 @@
         <!-- Project 3 -->
         <div class="project-content" id="project3">
             <div class="project-header">
-                <div class="project-number-large">3</div>
+                <div class="project-number-large"></div>
                 <h3 class="project-title">Fine-Grained Category Learning</h3>
             </div>
             
@@ -391,7 +456,7 @@
         <!-- Project 4 -->
         <div class="project-content" id="project4">
             <div class="project-header">
-                <div class="project-number-large">4</div>
+                <div class="project-number-large"></div>
                 <h3 class="project-title">GrantIQ360 - Compliance Check System</h3>
             </div>
             
@@ -427,7 +492,7 @@
         <!-- Project 5 -->
         <div class="project-content" id="project5">
             <div class="project-header">
-                <div class="project-number-large">5</div>
+                <div class="project-number-large"></div>
                 <h3 class="project-title">Lightning Detection & Protection System</h3>
             </div>
             
