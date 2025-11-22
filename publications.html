@@ -1,0 +1,236 @@
+<style>
+    .publications-section {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        color: #667eea;
+        font-size: 2em;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .intro-text {
+        text-align: center;
+        color: #6c757d;
+        font-size: 1.1em;
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+
+    .publication-card {
+        background: white;
+        border-left: 5px solid #667eea;
+        padding: 30px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+
+    .publication-card:hover {
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        transform: translateX(5px);
+    }
+
+    .publication-card:nth-child(even) {
+        border-left-color: #764ba2;
+    }
+
+    .pub-title {
+        color: #495057;
+        font-size: 1.3em;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .pub-authors {
+        color: #667eea;
+        font-size: 1em;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .pub-authors strong {
+        color: #764ba2;
+    }
+
+    .pub-venue {
+        color: #6c757d;
+        font-size: 0.95em;
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+
+    .pub-status {
+        display: inline-block;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    .status-accepted {
+        background: #d4edda;
+        color: #155724;
+    }
+
+    .status-published {
+        background: #cce5ff;
+        color: #004085;
+    }
+
+    .publication-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 50px;
+        padding: 30px;
+        background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        border-radius: 15px;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-number {
+        font-size: 2.5em;
+        font-weight: 700;
+        color: #667eea;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        color: #6c757d;
+        font-size: 0.95em;
+        font-weight: 600;
+    }
+
+    .references-section {
+        margin-top: 50px;
+        padding: 30px;
+        background: #f8f9fa;
+        border-radius: 15px;
+        text-align: center;
+        border: 2px dashed #dee2e6;
+    }
+
+    .references-section h3 {
+        color: #495057;
+        margin-bottom: 10px;
+    }
+
+    .references-section p {
+        color: #6c757d;
+        font-size: 1.05em;
+    }
+
+    @media (max-width: 768px) {
+        .publication-stats {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="publications-section">
+    <h2 class="section-title">Publications</h2>
+    
+    <p class="intro-text">
+        Published research in top-tier international conferences and journals, focusing on machine learning 
+        security, computer vision, and adversarial defense.
+    </p>
+
+    <div class="publication-card">
+        <h3 class="pub-title">
+            Targeted Manifold Manipulation Against Adversarial Attacks
+        </h3>
+        <p class="pub-authors">
+            <strong>Ghosh, B.</strong>, Harikumar, H., Venkatesh, S., and Rana, S.
+        </p>
+        <p class="pub-venue">
+            3rd IEEE Conference on Secure and Trustworthy Machine Learning, 2025
+        </p>
+        <span class="pub-status status-accepted">✓ Accepted</span>
+    </div>
+
+    <div class="publication-card">
+        <h3 class="pub-title">
+            Composite Concept Extraction through Backdooring
+        </h3>
+        <p class="pub-authors">
+            <strong>Ghosh, B.</strong>, Harikumar, H., Doan, D.K., Venkatesh, S., and Rana, S.
+        </p>
+        <p class="pub-venue">
+            The Eleventh Workshop on Fine-Grained Visual Categorization, CVPR 2024
+        </p>
+        <span class="pub-status status-accepted">✓ Accepted</span>
+    </div>
+
+    <div class="publication-card">
+        <h3 class="pub-title">
+            Composite Concept Extraction through Backdooring
+        </h3>
+        <p class="pub-authors">
+            <strong>Ghosh, B.</strong>, Harikumar, H., Doan, D.K., Venkatesh, S., and Rana, S.
+        </p>
+        <p class="pub-venue">
+            International Conference on Pattern Recognition (ICPR), 2024
+        </p>
+        <span class="pub-status status-published">📄 Published</span>
+    </div>
+
+    <div class="publication-card">
+        <h3 class="pub-title">
+            Sensing Surface Contamination of Metal Oxide Surge Arrester through Resistive Leakage Current 
+            Signal Analysis by Mathematical Morphology
+        </h3>
+        <p class="pub-authors">
+            Das, A., <strong>Ghosh, B.</strong>, Dalai, S., Chatterjee, B.
+        </p>
+        <p class="pub-venue">
+            IEEE Sensor Journal, 2020
+        </p>
+        <span class="pub-status status-published">📄 Published</span>
+    </div>
+
+    <div class="publication-card">
+        <h3 class="pub-title">
+            A Scheme for Local Lightning Detection and Prediction System
+        </h3>
+        <p class="pub-authors">
+            <strong>Ghosh, B.</strong>, Ghosh, A., Dey, D., Dalai, S., Chatterjee, B.
+        </p>
+        <p class="pub-venue">
+            IEEE Applied Signal Processing Conference (ASPCON), 2020
+        </p>
+        <span class="pub-status status-published">📄 Published</span>
+    </div>
+
+    <div class="publication-stats">
+        <div class="stat-card">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Total Publications</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">IEEE Publications</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">2</div>
+            <div class="stat-label">2024-2025 Papers</div>
+        </div>
+    </div>
+
+    <div class="references-section">
+        <h3>📋 References</h3>
+        <p>Available upon request</p>
+    </div>
+</div>

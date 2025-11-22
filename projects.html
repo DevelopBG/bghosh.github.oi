@@ -1,0 +1,485 @@
+<style>
+    .projects-container {
+        display: flex;
+        gap: 30px;
+        height: 600px;
+    }
+
+    .projects-sidebar {
+        width: 350px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .sidebar-title {
+        color: #667eea;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #667eea;
+    }
+
+    .project-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .project-list-item {
+        background: white;
+        margin-bottom: 12px;
+        padding: 15px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        border-left: 4px solid transparent;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-list-item:hover {
+        border-left-color: #764ba2;
+        background: #ffffff;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        transform: translateX(5px);
+    }
+
+    .project-list-item.active {
+        border-left-color: #667eea;
+        background: linear-gradient(90deg, #667eea15 0%, #ffffff 100%);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    }
+
+    .project-list-item .number {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 0.9em;
+        margin-right: 12px;
+    }
+
+    .project-list-item.active .number {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+
+    .project-list-item .name {
+        color: #495057;
+        font-weight: 600;
+        font-size: 0.95em;
+        line-height: 1.4;
+    }
+
+    .project-details {
+        flex: 1;
+        background: white;
+        border-radius: 10px;
+        padding: 40px;
+        overflow-y: auto;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-content {
+        display: none;
+    }
+
+    .project-content.active {
+        display: block;
+        animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .project-header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #e9ecef;
+    }
+
+    .project-number-large {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .project-title {
+        color: #495057;
+        font-size: 1.8em;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+
+    .project-description {
+        color: #6c757d;
+        line-height: 1.8;
+        font-size: 1.05em;
+        margin-bottom: 30px;
+    }
+
+    .project-highlights {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 10px;
+        border-left: 5px solid #764ba2;
+        margin-bottom: 25px;
+    }
+
+    .project-highlights h4 {
+        color: #764ba2;
+        font-size: 1.2em;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .project-highlights ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .project-highlights li {
+        padding-left: 25px;
+        margin-bottom: 12px;
+        position: relative;
+        color: #495057;
+        line-height: 1.7;
+    }
+
+    .project-highlights li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #667eea;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .project-technologies {
+        margin-top: 30px;
+    }
+
+    .tech-label {
+        color: #667eea;
+        font-weight: 700;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+
+    .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tech-tag {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #6c757d;
+    }
+
+    .empty-state h3 {
+        color: #667eea;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    /* Scrollbar styling */
+    .projects-sidebar::-webkit-scrollbar,
+    .project-details::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .projects-sidebar::-webkit-scrollbar-track,
+    .project-details::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .projects-sidebar::-webkit-scrollbar-thumb,
+    .project-details::-webkit-scrollbar-thumb {
+        background: #667eea;
+        border-radius: 10px;
+    }
+
+    .projects-sidebar::-webkit-scrollbar-thumb:hover,
+    .project-details::-webkit-scrollbar-thumb:hover {
+        background: #764ba2;
+    }
+
+    @media (max-width: 992px) {
+        .projects-container {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .projects-sidebar {
+            width: 100%;
+            max-height: 300px;
+        }
+
+        .project-details {
+            min-height: 400px;
+        }
+    }
+</style>
+
+<div class="projects-container">
+    <!-- Left Sidebar - Project List -->
+    <div class="projects-sidebar">
+        <h3 class="sidebar-title">Research Projects</h3>
+        <ul class="project-list">
+            <li class="project-list-item active" data-project="project1">
+                <span class="number">1</span>
+                <span class="name">Machine Learning Security Method</span>
+            </li>
+            <li class="project-list-item" data-project="project2">
+                <span class="number">2</span>
+                <span class="name">Model Explainability & Visualization</span>
+            </li>
+            <li class="project-list-item" data-project="project3">
+                <span class="number">3</span>
+                <span class="name">Fine-Grained Category Learning</span>
+            </li>
+            <li class="project-list-item" data-project="project4">
+                <span class="number">4</span>
+                <span class="name">GrantIQ360 - Compliance Check System</span>
+            </li>
+            <li class="project-list-item" data-project="project5">
+                <span class="number">5</span>
+                <span class="name">Lightning Detection & Protection System</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Right Side - Project Details -->
+    <div class="project-details">
+        <!-- Project 1 -->
+        <div class="project-content active" id="project1">
+            <div class="project-header">
+                <div class="project-number-large">1</div>
+                <h3 class="project-title">Machine Learning Security Method</h3>
+            </div>
+            
+            <p class="project-description">
+                Development of a novel machine learning security method that significantly improves detection 
+                capabilities, outperforming state-of-the-art methods with 99% detection accuracy.
+            </p>
+
+            <div class="project-highlights">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Achieved 99% detection accuracy surpassing existing methods</li>
+                    <li>Experimented with various DNN architectures including CNNs and Vision Transformers</li>
+                    <li>Validated on benchmark open-source datasets</li>
+                    <li>Advanced adversarial defense capabilities</li>
+                </ul>
+            </div>
+
+            <div class="project-technologies">
+                <div class="tech-label">Technologies Used:</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Vision Transformers</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-content" id="project2">
+            <div class="project-header">
+                <div class="project-number-large">2</div>
+                <h3 class="project-title">Model Explainability & Visualization</h3>
+            </div>
+            
+            <p class="project-description">
+                Developed advanced visualization and attribution methods to interpret predictions made by CNN 
+                and Transformer models, enhancing model transparency and trustworthiness.
+            </p>
+
+            <div class="project-highlights">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Enhanced model transparency through visual explanations</li>
+                    <li>Identified decision-critical regions in input data</li>
+                    <li>Developed feature relevance mapping techniques</li>
+                    <li>Facilitated model debugging through intuitive saliency mapping</li>
+                </ul>
+            </div>
+
+            <div class="project-technologies">
+                <div class="tech-label">Technologies Used:</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Model Interpretation</span>
+                    <span class="tech-tag">Saliency Mapping</span>
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Transformers</span>
+                    <span class="tech-tag">Visualization</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-content" id="project3">
+            <div class="project-header">
+                <div class="project-number-large">3</div>
+                <h3 class="project-title">Fine-Grained Category Learning</h3>
+            </div>
+            
+            <p class="project-description">
+                Designed an innovative method to learn fine-grained categories using minimal supervision, 
+                enabling recognition of unseen concept combinations.
+            </p>
+
+            <div class="project-highlights">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Minimal supervision requirement for training</li>
+                    <li>Recognition of unseen concept combinations</li>
+                    <li>No reliance on annotated textual descriptions</li>
+                    <li>Reduced dependency on large datasets</li>
+                </ul>
+            </div>
+
+            <div class="project-technologies">
+                <div class="tech-label">Technologies Used:</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Few-Shot Learning</span>
+                    <span class="tech-tag">Transfer Learning</span>
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-content" id="project4">
+            <div class="project-header">
+                <div class="project-number-large">4</div>
+                <h3 class="project-title">GrantIQ360 - Compliance Check System</h3>
+            </div>
+            
+            <p class="project-description">
+                Developed a production-ready compliance check product integrating Large Language Models 
+                for intelligent document analysis and automated compliance verification.
+            </p>
+
+            <div class="project-highlights">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Integrated LLM (Gemini-2.5, Claude Sonnet) into research platform</li>
+                    <li>Developed autonomous LLM-based agents with retrieval tools</li>
+                    <li>Built scalable serverless backend (AWS Lambda, DynamoDB, S3)</li>
+                    <li>Implemented secure authentication workflows (JWT, RBAC)</li>
+                    <li>Created PDF parsing and validation pipelines</li>
+                </ul>
+            </div>
+
+            <div class="project-technologies">
+                <div class="tech-label">Technologies Used:</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">LLM</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">DynamoDB</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-content" id="project5">
+            <div class="project-header">
+                <div class="project-number-large">5</div>
+                <h3 class="project-title">Lightning Detection & Protection System</h3>
+            </div>
+            
+            <p class="project-description">
+                Government-funded project (RUSA) focused on designing an expert system for local lightning 
+                detection and protection, achieving benchmark results.
+            </p>
+
+            <div class="project-highlights">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Achieved benchmark results in lightning detection</li>
+                    <li>Published in IEEE international scientific conference</li>
+                    <li>Collaborated with PhD researchers</li>
+                    <li>Practical application in protection systems</li>
+                </ul>
+            </div>
+
+            <div class="project-technologies">
+                <div class="tech-label">Technologies Used:</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">MATLAB</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Signal Processing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Project navigation functionality
+    (function() {
+        // Use setTimeout to ensure DOM is ready when loaded via fetch
+        setTimeout(function() {
+            const projectItems = document.querySelectorAll('.project-list-item');
+            const projectContents = document.querySelectorAll('.project-content');
+
+            projectItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-project');
+
+                    // Remove active class from all items and contents
+                    projectItems.forEach(i => i.classList.remove('active'));
+                    projectContents.forEach(c => c.classList.remove('active'));
+
+                    // Add active class to clicked item and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(projectId).classList.add('active');
+                });
+            });
+        }, 100);
+    })();
+</script>

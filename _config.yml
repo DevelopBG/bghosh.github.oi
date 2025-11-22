@@ -1,28 +1,42 @@
+# GitHub Pages Configuration
+# This file configures your Jekyll site for GitHub Pages
+
 # Site settings
-title: Banibrata Ghosh - Machine Learning Researcher
-description: Experienced Machine Learning Practitioner specializing in Computer Vision, Model Explainability, and Adversarial Defense
-author: Banibrata Ghosh
-email: your.email@example.com  # UPDATE THIS
-url: ""  # Update with your site URL when deployed (e.g., https://username.github.io)
-baseurl: ""  # Leave empty for GitHub Pages user site
+title: Banibrata Ghosh - Portfolio
+description: Machine Learning Researcher & Data Scientist specializing in Deep Learning, Computer Vision, and LLM Applications
+author: Banibrata (Bani) Ghosh
+email: your.email@example.com  # Update with your actual email
+
+# GitHub repository information
+baseurl: "" # Leave empty if hosting at username.github.io, or add /repository-name if hosting in a repo
+url: "https://yourusername.github.io" # Update with your GitHub Pages URL
 
 # Build settings
+# GitHub Pages uses Jekyll by default, but we're using plain HTML
+# So we need to exclude Jekyll processing for our HTML files
 markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+# Exclude files from processing
 exclude:
   - README.md
-  - QUICKSTART.md
-  - SETUP_README.md
-  - FILE_STRUCTURE.md
-  - FEATURES_SHOWCASE.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
 
-# SEO and Social
-twitter_username: your_twitter  # UPDATE THIS (or remove if not applicable)
-github_username: DevelopBG  # UPDATE THIS with your GitHub username
-linkedin_username: your_linkedin  # UPDATE THIS (or remove if not applicable)
+# Include files that start with underscore
+include:
+  - _config.yml
 
-# Google Analytics (optional)
-# google_analytics: UA-XXXXXXXXX-X  # Uncomment and add your tracking ID
-
-# Additional settings
-show_downloads: false
-timezone: Australia/Melbourne  # UPDATE if different
+# Since we're using custom HTML with JavaScript,
+# we don't need Jekyll to process our files
+# This ensures our HTML files are served as-is
+keep_files:
+  - index.html
+  - personal.html
+  - education.html
+  - experience.html
+  - projects.html
+  - publications.html

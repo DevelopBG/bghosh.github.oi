@@ -1,0 +1,175 @@
+<style>
+    .personal-section {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .profile-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .profile-header h2 {
+        color: #667eea;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .profile-header .subtitle {
+        color: #6c757d;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    .links a {
+        color: #667eea;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid #667eea;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+
+    .links a:hover {
+        background: #667eea;
+        color: white;
+    }
+
+    .summary {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border-left: 4px solid #667eea;
+    }
+
+    .summary h3 {
+        color: #495057;
+        margin-bottom: 15px;
+    }
+
+    .summary p {
+        line-height: 1.8;
+        color: #495057;
+        text-align: justify;
+    }
+
+    .skills-section h3 {
+        color: #495057;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .skill-category {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid #764ba2;
+    }
+
+    .skill-category h4 {
+        color: #667eea;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+
+    .skill-category p {
+        color: #495057;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="personal-section">
+    <div class="profile-header">
+        <h2>Banibrata (Bani) Ghosh</h2>
+        <p class="subtitle">Machine Learning | Data Science</p>
+        <div class="links">
+            <a href="https://github.com" target="_blank">🔗 GitHub</a>
+            <a href="#" target="_blank">🌐 Website</a>
+            <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="summary">
+        <h3>Professional Summary</h3>
+        <p>
+            Experienced Machine Learning Practitioner/Researcher with a strong background in developing and deploying 
+            deep learning models for computer vision, model explainability, adversarial defense, and Large Language Model. 
+            Proficient in Python, PyTorch, and SQL, with hands-on expertise in data analysis, feature engineering, and 
+            building end-to-end ML pipelines. Published in top-tier conferences with a proven ability to translate complex 
+            problems into actionable solutions. Skilled at working with large datasets and delivering scalable, 
+            production-ready AI solutions.
+        </p>
+    </div>
+
+    <div class="skills-section">
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Machine Learning</h4>
+                <p>SVM, Regression, Classification, Random Forest, Decision Trees, XGBoost</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Deep Learning</h4>
+                <p>CNN, Transformer, LLM (RAG, Fine-tune, Agents)</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Libraries & Frameworks</h4>
+                <p>Scikit Learn, PyTorch (CUDA), Matplotlib, NumPy, LangChain</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Front End</h4>
+                <p>HTML, React</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <p>Python, MATLAB, MySQL</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>AWS Services</h4>
+                <p>S3, EC2, Lambda, Amplify, DynamoDB, APIs</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>MLOps</h4>
+                <p>Git, GitHub Action, CI/CD, DVC, MLflow, Docker</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Operating Systems</h4>
+                <p>Windows, Linux</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Additional Skills</h4>
+                <p>Data Analysis, Data Visualization, Feature Selection, Scientific Research, Project Leadership</p>
+            </div>
+        </div>
+    </div>
+</div>

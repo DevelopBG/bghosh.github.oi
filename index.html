@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banibrata Ghosh - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 20px 30px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            font-weight: 600;
+            color: #495057;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+        }
+
+        .tab:hover {
+            background: #e9ecef;
+            color: #667eea;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: white;
+        }
+
+        .content {
+            padding: 40px;
+            min-height: 500px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+            font-size: 18px;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .tab {
+                padding: 15px 20px;
+                font-size: 14px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Banibrata (Bani) Ghosh</h1>
+            <p>Machine Learning | Data Science</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="personal">Personal Information</button>
+            <button class="tab" data-tab="education">Education</button>
+            <button class="tab" data-tab="experience">Experience</button>
+            <button class="tab" data-tab="projects">Projects</button>
+            <button class="tab" data-tab="publications">Publications</button>
+        </div>
+
+        <div class="content">
+            <div id="personal" class="tab-content active">
+                <div class="loading">Loading...</div>
+            </div>
+            <div id="education" class="tab-content">
+                <div class="loading">Loading...</div>
+            </div>
+            <div id="experience" class="tab-content">
+                <div class="loading">Loading...</div>
+            </div>
+            <div id="projects" class="tab-content">
+                <div class="loading">Loading...</div>
+            </div>
+            <div id="publications" class="tab-content">
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.dataset.tab;
+
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+
+                // Load content if not already loaded
+                loadTabContent(targetTab);
+            });
+        });
+
+        // Function to load content from external HTML files
+        async function loadTabContent(tabName) {
+            const contentDiv = document.getElementById(tabName);
+            
+            // Check if content is already loaded (not just loading message)
+            if (contentDiv.querySelector('.loading')) {
+                try {
+                    const response = await fetch(`${tabName}.html`);
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${tabName}.html`);
+                    }
+                    const html = await response.text();
+                    contentDiv.innerHTML = html;
+                    
+                    // Execute any scripts in the loaded content
+                    const scripts = contentDiv.getElementsByTagName('script');
+                    for (let i = 0; i < scripts.length; i++) {
+                        const script = scripts[i];
+                        const newScript = document.createElement('script');
+                        if (script.src) {
+                            newScript.src = script.src;
+                        } else {
+                            newScript.textContent = script.textContent;
+                        }
+                        document.body.appendChild(newScript);
+                        document.body.removeChild(newScript);
+                    }
+                } catch (error) {
+                    contentDiv.innerHTML = `
+                        <div class="error">
+                            <strong>Error loading content:</strong> ${error.message}
+                            <br><br>
+                            Please make sure the file <code>${tabName}.html</code> exists in the same directory.
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        // Load the first tab content on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadTabContent('personal');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<style>
+    .education-section {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        color: #667eea;
+        font-size: 2em;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .education-item {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border-left: 5px solid #667eea;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .education-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+    }
+
+    .education-item h3 {
+        color: #495057;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .education-item .degree {
+        color: #667eea;
+        font-weight: 600;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    .education-item .institution {
+        color: #6c757d;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .certifications {
+        margin-top: 50px;
+    }
+
+    .certifications h3 {
+        color: #764ba2;
+        font-size: 1.8em;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .cert-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+
+    .cert-card:hover {
+        border-color: #764ba2;
+        box-shadow: 0 5px 15px rgba(118, 75, 162, 0.1);
+    }
+
+    .cert-card h4 {
+        color: #495057;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+    }
+
+    .cert-card .provider {
+        color: #764ba2;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .cert-card .year {
+        color: #6c757d;
+        font-size: 0.9em;
+    }
+
+    .achievements {
+        margin-top: 50px;
+        background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .achievements h3 {
+        color: #667eea;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .achievement-item {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border-left: 4px solid #667eea;
+    }
+
+    .achievement-item strong {
+        color: #667eea;
+    }
+
+    .achievement-item p {
+        color: #495057;
+        line-height: 1.6;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .cert-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="education-section">
+    <h2 class="section-title">Education & Qualifications</h2>
+
+    <div class="education-item">
+        <h3>🎓 Doctor of Philosophy (PhD)</h3>
+        <div class="degree">Machine Learning & Deep Learning</div>
+        <div class="institution">Deakin University, Australia</div>
+    </div>
+
+    <div class="education-item">
+        <h3>🎓 Master of Engineering</h3>
+        <div class="degree">Electrical Engineering</div>
+        <div class="institution">Jadavpur University (J.U.), India</div>
+    </div>
+
+    <div class="education-item">
+        <h3>🎓 Bachelor of Technology</h3>
+        <div class="degree">Electrical Engineering</div>
+        <div class="institution">Techno India, India</div>
+    </div>
+
+    <div class="certifications">
+        <h3>Certifications & Courses</h3>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <h4>AWS Cloud Practitioner</h4>
+                <div class="provider">Udemy</div>
+                <div class="year">2025</div>
+            </div>
+
+            <div class="cert-card">
+                <h4>Ethics in the Age of Generative AI</h4>
+                <div class="provider">LinkedIn</div>
+                <div class="year">2024</div>
+            </div>
+
+            <div class="cert-card">
+                <h4>Hyperparameter Tuning & Regularization</h4>
+                <div class="provider">Andrew Ng, Deep Learning.ai</div>
+                <div class="year">2020</div>
+            </div>
+
+            <div class="cert-card">
+                <h4>Neural Networks and Deep Learning</h4>
+                <div class="provider">Andrew Ng, Deep Learning.ai</div>
+                <div class="year">2019</div>
+            </div>
+
+            <div class="cert-card">
+                <h4>Convolutional Neural Networks</h4>
+                <div class="provider">Andrew Ng, Deep Learning.ai</div>
+                <div class="year">2019</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="achievements">
+        <h3>🏆 Achievements</h3>
+        
+        <div class="achievement-item">
+            <strong>GATE - 2017 & 2018</strong>
+            <p>Electrical Engineering - All India Rank 97.5 percentile</p>
+        </div>
+
+        <div class="achievement-item">
+            <strong>National Talent Search</strong>
+            <p>Physics - All India Rank 99 percentile</p>
+        </div>
+    </div>
+</div>
