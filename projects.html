@@ -1,4 +1,29 @@
 <style>
+    .tech-section-title {
+    color: #667eea;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    }
+
+    .technical-skills-list {
+        list-style-position: inside;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .technical-skills-list li {
+        color: #495057;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        padding-left: 10px;
+    }
+
+    .technical-skills-list li strong {
+        color: #667eea;
+        font-weight: 600;
+    }
     .question-section {
     background: #f0f4ff;
     padding: 20px 25px;
@@ -394,10 +419,26 @@
             </div>
             
             <p class="project-description">
-                Developed advanced visualization and attribution methods to interpret predictions made by CNN 
-                and Transformer models, enhancing model transparency and trustworthiness.
+                As AI technology continues to evolve, its models are becoming more intricate and are being deployed across a wide range of domains, including social media analytics, financial services, and medical diagnostics. 
+                Given the growing reliance on AI-driven decision-making, ensuring transparency and explainability of model predictions is of paramount importance. 
+                This necessity has led to the emergence of Explainable AI (XAI), which aims to provide insights into model behavior and foster trust in AI systems. 
+                One approach to avail model explainability is the retrieval of similar instances from the training dataset that are most relevant to a given prediction.
             </p>
-
+            <p class="project-description">
+               We identify the nearest neighbors by selecting points from the exemplar set (often the training set or a curated version of that) that exhibit high activation under this backdoor. 
+            </p>
+            <p class="project-description">
+               We developed a modified backdoor technique that generates query-specific orthogonal triggers which are responsible for the local distortion to the manifold where the query sample is located in the manifold. 
+            </p>
+            <div class="project-image">
+                <img src="assests/images/intro1.jpeg" alt="Introduction1" width="200"><img src="assests/images/intro2.jpeg" alt="introduction2" width="200"><img src="assests/images/intro3.jpeg" alt="introduction4" width="200">
+            </div>
+            <p class="project-description">
+               The first image shows a pre-trained binary classifier (theta) distinguishing between two classes, Class1 and Class2, and all the training samples, plotted in red and blue to represent their classes respectively, 
+               and a query point (from testset), positioned within the class Class1, has been marked in the figure too. 
+               The second figure showcases the change in the decision surface of the model (theta prime) after fine-tuning, a distinct uplift is introduced in the region where the query sample was mapped. The green cap of the mountain represents the dummy class. 
+               The last figure shows the retrieval process once we get the TMM model (i.e. theta_prime). Neighbours can then be identified by their affinity to the dummy class when added with the trigger, as shown.
+            </p>
             <div class="project-highlights">
                 <h4>Key Achievements</h4>
                 <ul>
@@ -428,9 +469,18 @@
             </div>
             
             <p class="project-description">
-                Designed an innovative method to learn fine-grained categories using minimal supervision, 
-                enabling recognition of unseen concept combinations.
+                Humans excel at combining orthogonal concepts for fine-grained classifications, whereas machines often struggle with this task. For example, a machine learning model trained to recognize cars may have difficulty identifying a specific subset, such as red cars, unless it has been explicitly trained on that distinction. 
+                Text-based concept learning offers a potential solution, it requires a large volume of annotated data and may only generalize to unseen concept combinations at a foundational model scale. 
+                To the best of our knowledge, no purely visual-domain solution exists that can learn from just a few examples of individual concepts let alone from their combinations.
             </p>
+            <p class="project-description">
+                We introduce three types of concepts: primary, secondary, and composite. The primary concept refers to the object class in the pre-trained model (e.g., car), the secondary concept represents a finer-grained attribute within the primary concept (e.g., red), and the composite concept is the combination of both (e.g., red car). 
+                Our approach formulates a contrastive learning problem, utilizing backdoors as a mechanism to extract composite concepts.
+            </p>
+            <div class="project-image">
+                <img src="assests/images/method_training_v1.PNG">
+                <img src="assests/images/method_testing.PNG">
+            </div>
 
             <div class="project-highlights">
                 <h4>Key Achievements</h4>
@@ -461,10 +511,63 @@
             </div>
             
             <p class="project-description">
-                Developed a production-ready compliance check product integrating Large Language Models 
-                for intelligent document analysis and automated compliance verification.
+                AI-Powered Grant Compliance & Analysis Platform Full-Stack Serverless Application with Multi-Model AI Integration
             </p>
-
+            <p class="project-description">
+                GrantIQ360, an enterprise-grade AI-powered compliance analysis platform that revolutionizes grant proposal evaluation. Built a sophisticated serverless architecture on AWS integrating multiple Large Language Models (Gemini 2.5 Pro, GPT-4, Claude Sonnet 4) for intelligent document processing. 
+                Implemented robust security with JWT authentication, role-based access control (RBAC), and comprehensive audit logging. Developed advanced features including PDF annotation with pypdf, intelligent document chunking, checkpoint-based processing for crash recovery, and real-time credit management. Integrated Stripe payment processing and Clerk authentication for seamless user experience. 
+                The platform processes complex grant guidelines and proposals, generating detailed compliance reports with gap analysis and actionable recommendations, achieving 15-second average analysis time for 50-page documents.
+            </p>
+            <h2 class="tech-section-title"> Technical Skills Demonstrated</h2>
+            <ol class="technical-skills-list">
+                <li class="technical-skills-list">
+                    <strong>Large Language Models (LLMs):</strong> Integrated multiple LLMs (Gemini 2.5 Pro, GPT-4, Claude Sonnet 4) for diverse NLP tasks including document summarization, compliance checking, and recommendation generation.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Serverless Architecture:</strong> Designed and implemented a scalable serverless backend using AWS Lambda, DynamoDB, and S3 for efficient document processing and storage.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Authentication & Security:</strong> Developed secure authentication workflows using JWT and Clerk, implementing role-based access control (RBAC) for user management.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>PDF Processing:</strong> Utilized pypdf for advanced PDF parsing, annotation, and validation to extract and analyze document content.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Resilient Processing Pipelines:</strong> Created checkpoint-based processing to handle large documents, ensuring crash recovery and efficient resource utilization.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Payment Integration:</strong> Integrated Stripe for seamless payment processing and credit management within the platform.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Frontend Development:</strong> Built a responsive React frontend for user interaction, document upload, and report visualization.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Audit Logging:</strong> Implemented comprehensive audit logging for tracking user actions and system events.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Performance Optimization:</strong> Achieved an average analysis time of 15 seconds for 50-page documents through efficient coding and resource management.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Cloud Services:</strong> Leveraged various AWS services for hosting, storage, and computing needs.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Agile Development:</strong> Employed agile methodologies for iterative development, testing, and deployment.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Team Collaboration:</strong> Worked closely with cross-functional teams including AI researchers, backend and frontend developers, and product managers to deliver a high-quality product.
+                </li>
+                <li class="technical-skills-list">
+                    <strong>Documentation & Reporting:</strong> Created detailed technical documentation and user guides for platform features and functionalities.
+                </li>                        
+            </ol>
+            </p>
+            <div class="project-image">
+                <img src="assests/images/grantiq1.png" alt="Motivation of the proposed method">
+                <img src="assests/images/grantiq2.png" alt="Motivation of the proposed method">
+                <img src="assests/images/grantiq3.png" alt="Motivation of the proposed method">
+                <img src="assests/images/grantiq4.png" alt="Motivation of the proposed method">
+                <img src="assests/images/grantiq5.png" alt="Motivation of the proposed method">
+            </div>
             <div class="project-highlights">
                 <h4>Key Achievements</h4>
                 <ul>
@@ -497,10 +600,14 @@
             </div>
             
             <p class="project-description">
-                Government-funded project (RUSA) focused on designing an expert system for local lightning 
-                detection and protection, achieving benchmark results.
+                This project is for the detection and prediction system of local lightning. Different types of environmental parameters have an impact on lightning strikes. 
+                These parameters values are very volatile and location-specific. Some of the dominant parameters, like electric field gradient, electric field strength, atmospheric pressure, etc. have been considered to predict lightning strikes. 
+                For initial detection, AS3935 IC has been implemented with some modification which detects lightning strokes within some specific range. 
+                A Fuzzy inference system has been developed so that the prediction can be done using the dominant parameter values without having a large prior dataset of lightning strikes of any specified location.
             </p>
-
+            <div class="project-image">
+                <img src="assests/images/lightning_detection.jpg" alt="Lightning Detection System">
+            </div>
             <div class="project-highlights">
                 <h4>Key Achievements</h4>
                 <ul>
