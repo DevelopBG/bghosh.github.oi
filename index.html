@@ -125,8 +125,8 @@
           <div class="about-text reveal">
             <p>
               I'm a machine learning practitioner and researcher who builds and deploys deep learning systems for
-              <strong>computer vision</strong>, <strong>model explainability</strong>, <strong>adversarial defense</strong>
-              and <strong>large language models</strong>.
+              <strong>Computer Vision</strong>, <strong>Model Explainability</strong>, <strong>Adversarial Defense</strong>, <strong>Responsible AI</strong>
+              and <strong>Large Language Models</strong>.
             </p>
             <p>
               My doctoral work at Deakin University produced new methods for detecting adversarial attacks, retrieving
@@ -180,133 +180,86 @@
           <article class="tl-item reveal">
             <div class="card tl-card">
               <div class="tl-head">
-                <h3 class="tl-role">AI Research Associate (Part-time) <span class="now-badge">now</span></h3>
-                <span class="tl-date">Jul 2026 — present</span>
+                <h3 class="tl-role">ML Ops Engineer (Research Assistant) <span class="now-badge">now</span></h3>
+                <span class="tl-date">Sep 2025 — present</span>
               </div>
-              <p class="tl-org">EdGenAI</p>
+              <p class="tl-org">Deakin University</p>
               <ul>
-                <li><strong>GraphRAG, fine-tuning &amp; LLM-as-a-judge:</strong> built a multi-domain GraphRAG pipeline (NetworkX, FAISS, spaCy NER) over five subject knowledge graphs (63K+ nodes, 270K+ edges) that generates grounded IT exam questions with Qwen 2.5 7B. Built a LoRA/QLoRA fine-tuning pipeline on 1,500+ examples and an LLM-as-a-judge framework that evaluated 500+ records.</li>
-                <li><strong>Automated AI grading:</strong> designed a six-stage pipeline for mixed-format student submissions: classification, OCR, normalisation, PII redaction, LLM grading and human review. The finished classification module meets a <strong>97% per-class precision and recall</strong> gate, enforced by CI regression tests.</li>
-                <li><strong>Privacy &amp; production engineering:</strong> privacy-first processing with Presidio, custom PII recognisers and encrypted pseudonymisation. Self-hosted Qwen3-VL on vLLM for handwriting OCR. Added quality gates, structured logging, SQLite WAL crash recovery and configuration-hash stage caching.</li>
+                <li>Built <strong>GrantIQ360</strong>, a compliance-check product with production-ready models, versioning and statistical validation.</li>
+                <li>Integrated LLMs (Gemini 2.5, Claude Sonnet) into Deakin's research platform for document analysis, structured reasoning and automated compliance checks.</li>
+                <li>Developed autonomous LLM agents with retrieval tools, PDF parsing and validation pipelines to interpret research guidelines and policies; fine-tuned models to improve analysis quality.</li>
+                <li>Built a scalable serverless backend (AWS Lambda, DynamoDB, S3) with JWT/RBAC authentication for high-volume document processing.</li>
               </ul>
-              <div class="chips"><span class="chip">GraphRAG</span><span class="chip">Qwen 2.5 / Qwen3-VL</span><span class="chip">LoRA / QLoRA</span><span class="chip">vLLM</span><span class="chip">FAISS</span><span class="chip">NetworkX</span><span class="chip">spaCy</span><span class="chip">Presidio</span><span class="chip">LLM-as-a-judge</span></div>
+              <div class="chips"><span class="chip">Python</span><span class="chip">LLMs (OpenAI, Gemini, Llama)</span><span class="chip">AWS Lambda · S3 · EC2 · ECR</span><span class="chip">Amplify</span><span class="chip">DynamoDB</span><span class="chip">React</span><span class="chip">JavaScript</span></div>
             </div>
           </article>
 
           <article class="tl-item reveal">
             <div class="card tl-card">
               <div class="tl-head">
-                <h3 class="tl-role">Lecturer (Casual) <span class="now-badge">now</span></h3>
-                <span class="tl-date">Mar 2026 — present</span>
+                <h3 class="tl-role">Machine Learning Researcher (PhD)</h3>
+                <span class="tl-date">May 2021 — Aug 2025</span>
               </div>
-              <p class="tl-org">Melbourne Institute of Technology, Australia</p>
+              <p class="tl-org">Deakin University</p>
               <ul>
-                <li>Teach Predictive Analytics and Big Data Analytics to cohorts of 30+ Master's students, turning advanced machine learning and statistics into applied learning outcomes.</li>
-                <li>Redesigned the lab exercises around real datasets, so students build and critically evaluate complete machine learning pipelines.</li>
+                <li><strong>ML security:</strong> designed a new adversarial-attack detection method that reached <strong>99% detection accuracy</strong> and outperformed state-of-the-art baselines across CNNs and Vision Transformers.</li>
+                <li><strong>Explainability:</strong> built visualisation and attribution methods that show which input regions drive CNN and Transformer predictions, making model debugging easier.</li>
+                <li><strong>Fine-grained learning:</strong> learned composite concepts from minimal supervision, recognising unseen combinations without text annotations or large datasets.</li>
+                <li>Feature engineering, EDA, statistical testing, and model and data versioning throughout.</li>
               </ul>
-              <div class="chips"><span class="chip">Predictive Analytics</span><span class="chip">Big Data Analytics</span><span class="chip">Curriculum design</span></div>
-            </div>
-          </article>
-
-          <article class="tl-item reveal">
-            <div class="card tl-card">
-              <div class="tl-head">
-                <h3 class="tl-role">Research Assistant (Generative AI)</h3>
-                <span class="tl-date">Sep 2025 — Dec 2025</span>
-              </div>
-              <p class="tl-org">Deakin University, Australia</p>
-              <ul>
-                <li><strong>GrantIQ360:</strong> a production platform combining LLM retrieval-augmented generation with conventional machine learning, deployed to 10–20 live stakeholders. It cut document-processing time by about <strong>25%</strong>.</li>
-                <li>Built cloud-native pipelines on AWS (Lambda, S3, DynamoDB) with evaluation-gated CI in GitHub Actions, so validated model updates could ship the same day.</li>
-                <li>Implemented safety guardrails, output validation and behavioural drift monitoring to meet regulated-data handling requirements.</li>
-                <li>Turned domain and regulatory requirements into technical architecture with product, engineering and compliance teams; mentored students in Python, SQL and applied ML.</li>
-              </ul>
-              <div class="chips"><span class="chip">RAG</span><span class="chip">AWS Lambda · S3 · DynamoDB</span><span class="chip">GitHub Actions</span><span class="chip">Guardrails</span><span class="chip">Drift monitoring</span><span class="chip">Python</span></div>
+              <div class="chips"><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">CNN</span><span class="chip">Vision Transformer</span><span class="chip">LLMs</span><span class="chip">Optimisation</span><span class="chip">CUDA</span><span class="chip">Linux</span></div>
             </div>
           </article>
 
           <article class="tl-item past reveal">
             <div class="card tl-card">
               <div class="tl-head">
-                <h3 class="tl-role">PhD Researcher: Machine Learning &amp; Trustworthy AI</h3>
-                <span class="tl-date">May 2021 — Oct 2025</span>
+                <h3 class="tl-role">Research Assistant</h3>
+                <span class="tl-date">Jul 2019 — Apr 2020</span>
               </div>
-              <p class="tl-org">Deakin University, Australia</p>
+              <p class="tl-org">Jadavpur University</p>
               <ul>
-                <li><strong>Adversarial robustness:</strong> designed and optimised CNN and Vision Transformer architectures that beat the state of the art on adversarial benchmarks by about <strong>15%</strong>. Published at IEEE SaTML 2025.</li>
-                <li><strong>Interpretability:</strong> built saliency and attribution tooling that was reused across three research projects. It lets non-specialist reviewers audit model decisions and speeds up investigating model behaviour.</li>
-                <li><strong>Representation learning:</strong> reached <strong>97%</strong> zero-shot fine-grained classification accuracy with CLIP and Vision Transformers, 12 points above the prior benchmark. Published at the CVPR 2024 FGVC Workshop and ICPR 2024.</li>
-                <li>Used controlled experimental design, significance testing and uncertainty quantification throughout, so every result is defensible and reproducible. Five peer-reviewed publications.</li>
+                <li>Government-funded (RUSA) project: <em>Expert System Design for Local Lightning Detection and Protection</em>.</li>
+                <li>Worked closely with PhD researchers; the work achieved benchmark results and was published at an IEEE international conference.</li>
               </ul>
-              <div class="chips"><span class="chip">PyTorch</span><span class="chip">CNN</span><span class="chip">Vision Transformer</span><span class="chip">CLIP</span><span class="chip">Adversarial ML</span><span class="chip">Explainable AI</span><span class="chip">CUDA</span><span class="chip">SLURM</span></div>
+              <div class="chips"><span class="chip">Python</span><span class="chip">MATLAB</span><span class="chip">scikit-learn</span><span class="chip">Fuzzy inference</span><span class="chip">Signal processing</span></div>
             </div>
           </article>
 
           <article class="tl-item past reveal">
             <div class="card tl-card">
               <div class="tl-head">
-                <h3 class="tl-role">Research Assistant (Scientific ML)</h3>
-                <span class="tl-date">Aug 2019 — Mar 2020</span>
-              </div>
-              <p class="tl-org">Jadavpur University, India</p>
-              <ul>
-                <li>Developed a government-funded predictive early-warning system that detects anomalies automatically from real-time sensor data, demonstrated as a lab prototype and proof of concept for industrial deployment.</li>
-                <li>Worked with domain engineers to combine statistical inference, physics-informed modelling and IoT sensor data in computational models. Published in IEEE Sensors Journal, 2020.</li>
-              </ul>
-              <div class="chips"><span class="chip">Python</span><span class="chip">MATLAB</span><span class="chip">Anomaly detection</span><span class="chip">IoT sensors</span><span class="chip">Signal processing</span></div>
-            </div>
-          </article>
-
-          <article class="tl-item past reveal">
-            <div class="card tl-card">
-              <div class="tl-head">
-                <h3 class="tl-role">Data Analyst</h3>
+                <h3 class="tl-role">Data Scientist</h3>
                 <span class="tl-date">Dec 2014 — Jan 2017</span>
               </div>
-              <p class="tl-org">Jio Private Limited, India</p>
+              <p class="tl-org">The Bootcamp Consultancy</p>
               <ul>
-                <li>Improved predictive model accuracy by about <strong>8%</strong> on a large customer dataset through feature engineering and model tuning.</li>
-                <li>Delivered complete analytical workflows (data extraction, exploratory analysis, modelling, deployment and monitoring) in Python, SQL and scikit-learn. The dashboards were adopted across several business functions.</li>
-                <li>Performed offline model validation and post-deployment performance analysis to assess business impact.</li>
-                <li>Designed and analysed A/B tests to assess the impact of product and marketing changes.</li>
+                <li>Built and deployed models for churn prediction, sales forecasting and sentiment analysis.</li>
+                <li>Ran EDA, feature engineering, hypothesis testing and A/B tests to produce actionable client insights; built Power BI dashboards.</li>
+                <li>Worked with data engineers, PMs and analysts on scope and data requirements; mentored junior analysts.</li>
               </ul>
-              <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">scikit-learn</span><span class="chip">Power BI</span><span class="chip">MS Excel</span></div>
+              <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">scikit-learn</span><span class="chip">Statistics</span><span class="chip">Power BI</span><span class="chip">Git</span><span class="chip">Docker</span></div>
             </div>
           </article>
         </div>
 
         <details class="card volunteer reveal">
-          <summary>teaching, service &amp; open source (6)</summary>
+          <summary>volunteering &amp; teaching (3)</summary>
           <div class="volunteer-list">
             <div class="volunteer-item">
-              <h4>Guest lecturer</h4>
-              <span class="tl-date">Postgraduate</span>
-              <p>Eight guest sessions on AI ethics, adversarial machine learning and model security.</p>
-            </div>
-            <div class="volunteer-item">
-              <h4>Curriculum contributor</h4>
-              <span class="tl-date">Postgraduate courses</span>
-              <p>Trustworthy AI, explainable AI and AI ethics materials adopted across two postgraduate courses; designed assessment rubrics.</p>
+              <h4>Open-source developer</h4>
+              <span class="tl-date">GitHub · Aug 2017 — present</span>
+              <p>ML models, deep learning experiments and data-analysis workflows.</p>
             </div>
             <div class="volunteer-item">
               <h4>Laboratory Instructor</h4>
               <span class="tl-date">Jadavpur University · Aug 2019 — Oct 2020</span>
-              <p>Practical electrical lab sessions and one-to-one support for UG and PG students.</p>
+              <p>Ran practical lab sessions and exams for UG and PG students.</p>
             </div>
             <div class="volunteer-item">
               <h4>Placement Coordinator</h4>
               <span class="tl-date">Jadavpur University · Oct 2018 — Jun 2019</span>
-              <p>Coordinated campus recruitment with multinational organisations and ran student employability initiatives.</p>
-            </div>
-            <div class="volunteer-item">
-              <h4>Open-source contributor</h4>
-              <span class="tl-date">GitHub · 2017 — present</span>
-              <p>Public tools and teaching resources for AI robustness and security, with 200+ GitHub stars.</p>
-            </div>
-            <div class="volunteer-item">
-              <h4>Peer reviewer</h4>
-              <span class="tl-date">Ongoing</span>
-              <p>Reviewer for machine learning conferences and journals.</p>
+              <p>Organised campus placements and liaised with multinational recruiters.</p>
             </div>
           </div>
         </details>
